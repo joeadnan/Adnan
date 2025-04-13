@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-container {
+  max-width: 960px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.photo-section {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  border: 5px solid red;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.intro {
+  flex: 2;
+  font-size: 18px;
+}
+
+.main {
+  display: flex;
+  gap: 40px;
+}
+
+.left-column, .right-column {
+  flex: 1;
+}
+
+h3 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li::before {
+  content: "● ";
+  color: #666;
+}
+ul li {
+  padding: 5px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+.kontak {
+  margin-left: -140px;
+}
+
+.hobi{
+  margin-left: -140px;
+}
+span {
+  font-size: 18px;
+}
+alamat {
+  padding-top: 20px;
+}
+.carousel {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.slides {
+  display: flex;
+  transition: transform 1.0s ease-in-out;
+  width: 300%;
+}
+
+.slide {
+  min-width: 50%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 80%;
+  display: block;
+}
+
+.controls {
+  position: absolute;
+  top: 80%;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.controls button {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
