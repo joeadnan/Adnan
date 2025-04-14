@@ -1,180 +1,175 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>CV Mohammad Hasim Adnan</title>
-  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <div class="cv-container">
-    <header>
-      <div class="photo-section">
-        <img src="Foto Formal.jpg" alt="Adnan" class="profile-photo" />
-        <h1>Mohammad Hasim Adnan</h1>
-        <p>Sarjana Administrasi Public <br> STIA Banten</p>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <!-- Header Section -->
+  <section class="pb-12">
+    <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row p-6 gap-6 items-center md:items-start">
+      <!-- Text Section -->
+      <div class="flex-1 space-y-4">
+        <p class="text-yellow-500 text-lg font-semibold">Warehouse Operational</p>
+        <h1 class="text-4xl font-extrabold text-gray-900">Mohammad Hasim Adnan</h1>
+        <p class="text-gray-700 text-base leading-relaxed">
+          Saya adalah tenaga profesional yang memiliki keahlian dalam bidang administrasi dan teknologi informasi. Berpengalaman sebagai tenaga administrasi sekolah yang teliti dan terstruktur, sekaligus sebagai IT Support yang andal dalam menangani permasalahan teknis. Mampu bekerja dalam lingkungan yang dinamis, memberikan solusi tepat waktu, serta mendukung kelancaran operasional melalui pendekatan yang efisien dan terintegrasi.
+        </p>
       </div>
-      <div class="intro">
-        <h2>About me</h2>
-        <p>Saya adalah tenaga profesional yang memiliki keahlian dalam bidang administrasi dan teknologi informasi. Berpengalaman sebagai tenaga administrasi sekolah yang teliti dan terstruktur, sekaligus sebagai IT Support yang andal dalam menangani permasalahan teknis. Mampu bekerja dalam lingkungan yang dinamis, memberikan solusi tepat waktu, serta mendukung kelancaran operasional melalui pendekatan yang efisien dan terintegrasi..</p>
+      <!-- Image Section -->
+      <div class="flex-shrink-0 w-48 h-48 rounded-xl overflow-hidden">
+        <img src="Foto Formal.jpg" alt="Foto Profil" class="object-cover w-full h-full" />
       </div>
-    </header>
+    </div>
+  </section>
 
-    <section class="main">
-      <div class="left-column">
-        <div class="data-diri">
-          <h3>Personal Data</h3>
-          <p><strong>Alamat:</strong><br/>Jl. Raya Serang KM 28, Kp. Bauan Masjid,<br> Parigi, Cikande,Kabupaten Serang, Banten 42186</p>
-          <p><strong>No Hp:</strong><br/>08382135937</p>
-          <p><strong>Email:</strong><br/>Hasyimjoe@gmail.com</p>
-          <p><strong>Linkedin:</strong><br/><a href="https://shorturl.at/e2AhA">Mohammad Hasim Adnan</a> </p>
+  <!-- Main Content Section -->
+  <section class="pb-12">
+    <div class="max-w-5xl mx-auto p-6 bg-white shadow-md rounded-xl grid grid-cols-1 md:grid-cols-2 gap-10">
+      <!-- Left Side -->
+      <div class="space-y-8">
+        <!-- Personal Data -->
+        <div>
+          <p class="text-yellow-500 font-semibold text-lg mb-2">Personal Data</p>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li><strong>Alamat:</strong> Jl. Raya Serang KM 28, Kp. Bauan Masjid Parigi, Cikande, Kabupaten Serang, Banten 42186</li>
+            <li><strong>No HP:</strong> 08382135937</li>
+            <li><strong>Email:</strong> hasyimjoe@gmail.com</li>
+            <li><strong>LinkedIn:</strong> <a href="https://shorturl.at/e2AhA" class="text-blue-600 underline">Profil LinkedIn</a></li>
+          </ul>
         </div>
 
-        <div class="keahlian-personal">
-          <h3>Soft Skills</h3>
-          <ul>
-            <li>Problem Solving</li>
-            <li>Teamwork</li>
-            <li>Manajemen Waktu</li>
+        <!-- Skills -->
+        <div>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">Soft Skills</h2>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Problem solving</li>
+            <li>Communication</li>
             <li>Adaptabilitas</li>
+            <li>Teamwork</li>
             <li>Leadership</li>
           </ul>
         </div>
 
-        <div class="keahlian-teknis">
-          <h3>Hard Skills</h3>
-          <ul>
+        <div>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">Hard Skills</h2>
+          <ul class="list-disc list-inside text-gray-700">
             <li>Inventory Control</li>
             <li>Warehouse Management System</li>
             <li>Forklift Operation</li>
             <li>Receiving & Shipping</li>
             <li>Warehouse Layout & Racking System</li>
             <li>Audit & Stock Opname</li>
-            <li>Ms. Excel / Spreadsheet</li>
           </ul>
         </div>
 
-        <div class="kemahiran">
-          <h3>IT Skills</h3>
-          <ul>
-            <li>Troubleshooting Hardware & Software</li>
-            <li>HTML, CSS, dan JavaScript</li>
-            <li>Instalasi & Konfigurasi Sistem Operasi</li>
-            <li>Pengelolaan Jaringan</li>
-            <li>Manajemen Remote Desktop Tools</li>
-            <li>Keamanan IT</li>
-            <li>PHP,Python</li>
-          </ul>
-        <div class="pendidikan">
-          <h3>Education</h3>
-          <ul>
-            <li>S1 Administrasi Public STIA Banten</li>
-            <li>LPK Tebar Iman Ciputat</li>
-            <li>MA Nur Et-taqwa</li>
-          </ul>
-          </div>
+        <!-- Education -->
+        <div>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">Education</h2>
+          <p class="text-yellow-600 font-semibold">STIA Banten</p>
+          <p>S1 Administrasi Publik</p>
         </div>
       </div>
 
-      <div class="right-column">
-        <div class="kontak">
-          <h3>Work Experience</h3>
-          <ol>
-            <li><span> Staff Administrasi SDN Baluk Cikande Juli 2023 - Sekarang</span>
-              <ul>
+      <!-- Right Side -->
+      <div class="space-y-8 border-l border-gray-300 pl-6">
+        <!-- Experience -->
+        <div>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">Experience</h2>
+
+          <!-- Job Entries -->
+          <div class="space-y-6">
+            <div>
+              <p class="font-semibold text-yellow-600">Staff Administrasi</p>
+              <p>SDN Baluk Cikande | Juli 2023 – Present</p>
+              <ul class="list-disc list-inside text-gray-600 mt-2">
                 <li>Pengelolaan Dokumen</li>
                 <li>Pelayanan Administrasi</li>
                 <li>Pengolahan Data</li>
                 <li>Koordinasi Kegiatan Sekolah</li>
                 <li>Pengelolaan Inventaris</li>
               </ul>
-            </li>
-            <li><span>Staff Warehouse PT. IMPP Juli 2021 - Juni 2023 </span>
-              <ul>
-                <li>Penerimaan barang</li>
-                <li>Penyimpanan barang</li>
-                <li>Pengeluaran barang</li>
-                <li>Pencatatan dan inventaris</li>
-                <li>Pemeliharaan barang dan gudang</li>
+            </div>
+
+            <div>
+              <p class="font-semibold text-yellow-600">Staff Warehouse</p>
+              <p>PT. IMPP | 2021 – Juni 2023</p>
+              <ul class="list-disc list-inside text-gray-600 mt-2">
+                <li>Penerimaan dan Pengeluaran Barang</li>
+                <li>Pencatatan dan Inventaris</li>
+                <li>Pemeliharaan Gudang</li>
                 <li>Koordinasi dan Komunikasi</li>
               </ul>
-            </li>
-              <li><span>Operator Warehouse PT. Indonesia Colour Printing Juni 2019 - Mei 2021</span>
-               <ul>
-                <li>Penerimaan dan Pemeriksaan Barang</li>
-                <li>Penyimpanan Barang</li>
-                <li>Pengambilan dan Pengemasan Barang</li>
-                <li>Distribusi Barang</li>
-                <li>Kebersihan dan Keamanan Gudang</li>
-                <li>Pelaporan dan Dokumentasi</li>
-              </ul>
-            </li>
-            <li><span>Operator Warehouse PT. Kabatama Raya Jan 2018 - 20 Sept 2018</span></li>
-              <ul>
-                <li>Penerimaan dan Pemeriksaan Barang</li>
-                <li>Penyimpanan Barang</li>
-                <li>Pengambilan dan Pengemasan Barang</li>
-                <li>Distribusi Barang</li>
-                <li>Kebersihan dan Keamanan Gudang</li>
-                <li>Pelaporan dan Dokumentasi</li>
-              </ul>
+            </div>
 
-            <li><span>Operator Produksi PT. Shita Woo Shung Jan 2018 - Mei 2019</span>
-              <ul>
+            <div>
+              <p class="font-semibold text-yellow-600">Operator Warehouse</p>
+              <p>PT. Kabatama Raya | 2016 – 2018</p>
+              <ul class="list-disc list-inside text-gray-600 mt-2">
+                <li>Pemeriksaan Barang</li>
+                <li>Penyimpanan & Distribusi</li>
+                <li>Kebersihan dan Keamanan Gudang</li>
+                <li>Pelaporan dan Dokumentasi</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="font-semibold text-yellow-600">Operator Production</p>
+              <p>PT. Shita Woo Shung | 2016 – 2018</p>
+              <ul class="list-disc list-inside text-gray-600 mt-2">
                 <li>Menjalankan Mesin Produksi</li>
-                <li>Proses Produksi</li>
                 <li>Kontrol Kualitas</li>
-                <li>Distribusi Barang</li>
-                <li>Pemeliharaan Mesin</li>
-                <li>Kebersihan dan Keselamatan Kerja</li>
+                <li>Kebersihan & Keselamatan</li>
                 <li>Pencatatan Hasil Produksi</li>
               </ul>
-            </li>
-          </ol>        
+            </div>
+          </div>
         </div>
-
-      </div>
-    </section>
-    <div class="carousel">
-      <h3 style="text-align: center;">Certificate of Competence</h3>
-      <div class="slides" id="slides">
-        <div class="slide"><img src="CCNA.png" alt="CCNA"></div>
-        <div class="slide"><img src="CyberS.png" alt="CYBER"></div>
-        <div class="slide"><img src="database.jpg" alt="DATABASE"></div>
-        <div class="slide"><img src="DataAnalyst.jpeg" alt=""></div>
-        <div class="slide"><img src="dataSc.jpg" alt=""></div>
-      </div>
-    
-      <div class="controls">
-        <button onclick="prevSlide()">⟨</button>
-        <button onclick="nextSlide()">⟩</button>
       </div>
     </div>
-    </section>
+  </section>
+
+  <!-- Sertifikat Section -->
+<!-- Sertifikat Section -->
+<section class="pb-12">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Sertifikat</h2>
+    <div class="flex flex-wrap justify-center gap-6">
+      <!-- Sertifikat Card -->
+      <div class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition w-full sm:w-1/2 md:w-1/3">
+        <h3 class="text-lg font-semibold text-yellow-600 mb-2">CCNA Certification</h3>
+        <img src="/CCNA.png" alt="CCNA" class="w-full h-48 object-cover rounded-lg shadow" />
+        <p class="text-sm text-gray-600 mt-2">Sertifikasi dari Cisco yang menunjukkan kemampuan dasar dalam jaringan komputer dan troubleshooting.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition w-full sm:w-1/2 md:w-1/3">
+        <h3 class="text-lg font-semibold text-yellow-600 mb-2">Database Fundamentals</h3>
+        <img src="/database.jpg" alt="Database" class="w-full h-48 object-cover rounded-lg shadow" />
+        <p class="text-sm text-gray-600 mt-2">Pelatihan pengenalan dasar-dasar basis data dan manajemen sistem database relasional</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition w-full sm:w-1/2 md:w-1/3">
+        <h3 class="text-lg font-semibold text-yellow-600 mb-2">Data Analyst Bootcamp</h3>
+        <img src="DataAnalyst.jpeg" alt="Data Analyst" class="w-full h-48 object-cover rounded-lg shadow" />
+        <p class="text-sm text-gray-600 mt-2">Pelatihan intensif yang membahas pengolahan data, visualisasi, dan analisis data menggunakan tools modern.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition w-full sm:w-1/2 md:w-1/3">
+        <h3 class="text-lg font-semibold text-yellow-600 mb-2">Data Science Essentials</h3>
+        <img src="dataSc.jpg" alt="Data Science" class="w-full h-48 object-cover rounded-lg shadow" />
+        <p class="text-sm text-gray-600 mt-2">Pelatihan dasar ilmu data yang mencakup machine learning, statistik, dan penggunaan Python dalam analisis data.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition w-full sm:w-1/2 md:w-1/3">
+        <h3 class="text-lg font-semibold text-yellow-600 mb-2">Cyber Security</h3>
+        <img src="CyberScurity.png" alt="Cyber Security" class="w-full h-48 object-cover rounded-lg shadow" />
+        <p class="text-sm text-gray-600 mt-2">Pelatihan dasar keamanan siber yang mencakup identifikasi ancaman, enkripsi, dan langkah-langkah pencegahan risiko.</p>
+      </div>
+    </div>
   </div>
-  <script>
-    let currentIndex = 0;
-    const slides = document.getElementById("slides");
-  
-    function showSlide(index) {
-      const totalSlides = slides.children.length;
-      if (index >= totalSlides) currentIndex = 0;
-      else if (index < 0) currentIndex = totalSlides - 1;
-      else currentIndex = index;
-  
-      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-  
-    function nextSlide() {
-      showSlide(currentIndex + 1);
-    }
-  
-    function prevSlide() {
-      showSlide(currentIndex - 1);
-    }
-  
-    // Auto slide (optional)
-    setInterval(nextSlide, 5000);
-  </script>
+</section>
+
 </body>
 </html>
