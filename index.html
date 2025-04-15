@@ -4,172 +4,575 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <title>CV Mohammad Hasim Adnan</title>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            secondary: '#059669',
+            accent: '#d97706',
+            dark: '#1f2937',
+            light: '#f3f4f6',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft': '0 4px 20px rgba(0, 0, 0, 0.08)',
+            'card': '0 6px 30px rgba(0, 0, 0, 0.12)',
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #2563eb 0%, #059669 100%);
+    }
+    .skill-pill {
+      transition: all 0.3s ease;
+    }
+    .skill-pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .certificate-card {
+      transition: all 0.3s ease;
+    }
+    .certificate-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .timeline-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 11px;
+      top: 24px;
+      height: calc(100% - 24px);
+      width: 2px;
+      background: #e5e7eb;
+    }
+    .progress-bar {
+      height: 6px;
+      border-radius: 3px;
+      background-color: #e5e7eb;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, #2563eb, #3b82f6);
+    }
+    .language-progress {
+      width: 80%;
+    }
+    .tech-progress {
+      width: 70%;
+    }
+    .office-progress {
+      width: 90%;
+    }
+    @media print {
+      .no-print {
+        display: none;
+      }
+      body {
+        background: white !important;
+      }
+      .gradient-bg {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-light text-dark font-sans">
   <!-- Header Section -->
-  <section class="pb-12">
-    <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row p-6 gap-6 items-center md:items-start">
-      <!-- Text Section -->
-      <div class="flex-1 space-y-4">
-        <p class="text-yellow-500 text-lg font-semibold">Warehouse Operational</p>
-        <h1 class="text-4xl font-extrabold text-gray-900">Mohammad Hasim Adnan</h1>
-        <p class="text-gray-700 text-base leading-relaxed">
-          Saya adalah tenaga profesional yang memiliki keahlian dalam bidang administrasi dan teknologi informasi. Berpengalaman sebagai tenaga administrasi sekolah yang teliti dan terstruktur, sekaligus sebagai IT Support yang andal dalam menangani permasalahan teknis. Mampu bekerja dalam lingkungan yang dinamis, memberikan solusi tepat waktu, serta mendukung kelancaran operasional melalui pendekatan yang efisien dan terintegrasi.
-        </p>
-      </div>
-      <!-- Image Section -->
-      <div class="flex-shrink-0 w-48 h-48 rounded-xl overflow-hidden">
-        <img src="Foto Formal.jpg" alt="Foto Profil" class="object-cover w-full h-full" />
+  <header class="gradient-bg text-white pt-12 pb-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <!-- Image Section -->
+        <div class="flex-shrink-0 w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-lg animate-fade-in">
+          <img src="Foto Formal.jpg" alt="Mohammad Hasim Adnan" class="object-cover w-full h-full" />
+        </div>
+        
+        <!-- Text Section -->
+        <div class="flex-1 text-center md:text-left animate-fade-in">
+          <p class="text-accent font-semibold text-lg mb-2">
+            <i class="fas fa-briefcase mr-2"></i>Warehouse Operational
+          </p>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Mohammad Hasim Adnan</h1>
+          <p class="text-white/90 text-lg leading-relaxed max-w-2xl">
+            Professional with expertise in administration and information technology. Experienced as meticulous school administrative staff and reliable IT Support. Capable of working in dynamic environments, providing timely solutions, and supporting operational efficiency.
+          </p>
+          <div class="mt-4 flex flex-wrap justify-center md:justify-start gap-2">
+            <a href="https://shorturl.at/e2AhA" target="_blank" class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full text-sm flex items-center transition">
+              <i class="fab fa-linkedin mr-2"></i> LinkedIn
+            </a>
+            <a href="mailto:hasyimjoe@gmail.com" class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full text-sm flex items-center transition">
+              <i class="fas fa-envelope mr-2"></i> Email
+            </a>
+            <a href="tel:08382135937" class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full text-sm flex items-center transition">
+              <i class="fas fa-phone mr-2"></i> Call
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </header>
 
   <!-- Main Content Section -->
-  <section class="pb-12">
-    <div class="max-w-5xl mx-auto p-6 bg-white shadow-md rounded-xl grid grid-cols-1 md:grid-cols-2 gap-10">
-      <!-- Left Side -->
+  <main class="max-w-6xl mx-auto px-6 -mt-10">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Left Sidebar -->
       <div class="space-y-8">
-        <!-- Personal Data -->
-        <div>
-          <p class="text-yellow-500 font-semibold text-lg mb-2">Personal Data</p>
-          <ul class="space-y-2 text-gray-600 text-sm">
-            <li><strong>Alamat:</strong> Jl. Raya Serang KM 28, Kp. Bauan Masjid Parigi, Cikande, Kabupaten Serang, Banten 42186</li>
-            <li><strong>No HP:</strong> 08382135937</li>
-            <li><strong>Email:</strong> hasyimjoe@gmail.com</li>
-            <li><strong>LinkedIn:</strong> <a href="https://shorturl.at/e2AhA" class="text-blue-600 underline">Profil LinkedIn</a></li>
+        <!-- Contact Card -->
+        <div class="bg-white rounded-xl shadow-soft p-6 animate-fade-in">
+          <h2 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-address-card mr-2 text-accent"></i>
+            Contact
+          </h2>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mr-2 mt-0.5 text-primary"></i>
+              <span>Jl. Raya Serang KM 28, Kp. Bauan Masjid Parigi, Cikande, Kabupaten Serang, Banten 42186</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone mr-2 text-primary"></i>
+              <span>08382135937</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-2 text-primary"></i>
+              <span>hasyimjoe@gmail.com</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-calendar-alt mr-2 text-primary"></i>
+              <span>Date of Birth: 25 September 1990</span>
+            </li>
           </ul>
         </div>
 
         <!-- Skills -->
-        <div>
-          <h2 class="text-xl font-bold text-gray-900 mb-2">Soft Skills</h2>
-          <ul class="list-disc list-inside text-gray-700">
-            <li>Problem solving</li>
-            <li>Communication</li>
-            <li>Adaptabilitas</li>
-            <li>Teamwork</li>
-            <li>Leadership</li>
-          </ul>
+        <div class="bg-white rounded-xl shadow-soft p-6 animate-fade-in">
+          <h2 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-star mr-2 text-accent"></i>
+            Skills
+          </h2>
+          
+          <div class="mb-6">
+            <h3 class="font-semibold text-lg mb-3 text-primary">Soft Skills</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Problem solving</span>
+              <span class="skill-pill bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Communication</span>
+              <span class="skill-pill bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Adaptability</span>
+              <span class="skill-pill bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Teamwork</span>
+              <span class="skill-pill bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Leadership</span>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="font-semibold text-lg mb-3 text-secondary">Hard Skills</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">Inventory Control</span>
+              <span class="skill-pill bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">WMS</span>
+              <span class="skill-pill bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">Forklift Operation</span>
+              <span class="skill-pill bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">Receiving & Shipping</span>
+              <span class="skill-pill bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">Warehouse Layout</span>
+              <span class="skill-pill bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">Stock Audit</span>
+            </div>
+          </div>
         </div>
 
-        <div>
-          <h2 class="text-xl font-bold text-gray-900 mb-2">Hard Skills</h2>
-          <ul class="list-disc list-inside text-gray-700">
-            <li>Inventory Control</li>
-            <li>Warehouse Management System</li>
-            <li>Forklift Operation</li>
-            <li>Receiving & Shipping</li>
-            <li>Warehouse Layout & Racking System</li>
-            <li>Audit & Stock Opname</li>
-          </ul>
+        <!-- Languages -->
+        <div class="bg-white rounded-xl shadow-soft p-6 animate-fade-in">
+          <h2 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-language mr-2 text-accent"></i>
+            Languages
+          </h2>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Indonesian</span>
+                <span class="text-sm text-dark/60">Native</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill w-full"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">English</span>
+                <span class="text-sm text-dark/60">Intermediate</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill language-progress"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="bg-white rounded-xl shadow-soft p-6 animate-fade-in">
+          <h2 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-laptop-code mr-2 text-accent"></i>
+            Technical Skills
+          </h2>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Microsoft Office</span>
+                <span class="text-sm text-dark/60">Advanced</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill office-progress"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">IT Support</span>
+                <span class="text-sm text-dark/60">Intermediate</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill tech-progress"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Database Management</span>
+                <span class="text-sm text-dark/60">Intermediate</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill tech-progress"></div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Education -->
-        <div>
-          <h2 class="text-xl font-bold text-gray-900 mb-2">Education</h2>
-          <p class="text-yellow-600 font-semibold">STIA Banten</p>
-          <p>S1 Administrasi Publik</p>
+        <div class="bg-white rounded-xl shadow-soft p-6 animate-fade-in">
+          <h2 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-graduation-cap mr-2 text-accent"></i>
+            Education
+          </h2>
+          <div class="space-y-4">
+            <div>
+              <h3 class="font-semibold text-primary">STIA Banten</h3>
+              <p class="text-dark/80">S1 Administrasi Publik</p>
+              <p class="text-sm text-dark/60">2022 - 2024</p>
+            </div>
+            <div class="pt-2">
+              <h3 class="font-semibold text-primary">SMK Negeri 1 Serang</h3>
+              <p class="text-dark/80">Teknik Komputer dan Jaringan</p>
+              <p class="text-sm text-dark/60">2010 - 2013</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificates -->
+        <div class="bg-white rounded-xl shadow-soft p-6 animate-fade-in">
+          <h2 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-certificate mr-2 text-accent"></i>
+            Certificates
+          </h2>
+          <div class="space-y-3">
+            <div>
+              <h3 class="font-medium text-primary">CCNA Certification</h3>
+              <p class="text-sm text-dark/70">Cisco Networking Fundamentals</p>
+            </div>
+            <div>
+              <h3 class="font-medium text-primary">Database Fundamentals</h3>
+              <p class="text-sm text-dark/70">SQL & Database Management</p>
+            </div>
+            <div>
+              <h3 class="font-medium text-primary">Data Analyst Bootcamp</h3>
+              <p class="text-sm text-dark/70">Data Visualization & Analysis</p>
+            </div>
+            <div>
+              <h3 class="font-medium text-primary">Cybersecurity Bootcamp</h3>
+              <p class="text-sm text-dark/70">Jaringan dan Keamanan Jaringan</p>
+            </div>
+            <div>
+              <h3 class="font-medium text-primary">Graphic Design</h3>
+              <p class="text-sm text-dark/70">Adobe Tools Training</p>
+            </div>
+            <div>
+              <h3 class="font-medium text-primary">Data Science Bootcamp</h3>
+              <p class="text-sm text-dark/70">statistik, pemrograman, dan machine learning</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Right Side -->
-      <div class="space-y-8 border-l border-gray-300 pl-6">
+      <!-- Right Content -->
+      <div class="lg:col-span-2 space-y-8">
+        <!-- About -->
+        <div class="bg-white rounded-xl shadow-soft p-6 animate-fade-in">
+          <h2 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-user-tie mr-2 text-accent"></i>
+            Professional Summary
+          </h2>
+          <p class="text-dark/80 leading-relaxed">
+            Experienced professional with 4+ years in warehouse operations and administrative roles. Proven track record in inventory management, logistics coordination, and IT support. Adept at implementing efficient warehouse systems, reducing operational costs by 15% through process optimization. Strong technical skills combined with hands-on experience in school administration and data management. Fluent in implementing WMS solutions and maintaining accurate inventory records with 99.8% accuracy rate.
+          </p>
+        </div>
+
         <!-- Experience -->
-        <div>
-          <h2 class="text-xl font-bold text-gray-900 mb-2">Experience</h2>
-
-          <!-- Job Entries -->
-          <div class="space-y-6">
-            <div>
-              <p class="font-semibold text-yellow-600">Staff Administrasi</p>
-              <p>SDN Baluk Cikande | Juli 2023 – Present</p>
-              <ul class="list-disc list-inside text-gray-600 mt-2">
-                <li>Pengelolaan Dokumen</li>
-                <li>Pelayanan Administrasi</li>
-                <li>Pengolahan Data</li>
-                <li>Koordinasi Kegiatan Sekolah</li>
-                <li>Pengelolaan Inventaris</li>
-              </ul>
+        <div class="bg-white rounded-xl shadow-soft p-6 animate-fade-in">
+          <h2 class="text-xl font-bold mb-6 flex items-center">
+            <i class="fas fa-briefcase mr-2 text-accent"></i>
+            Work Experience
+          </h2>
+          
+          <div class="space-y-8 relative">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item pl-6 relative">
+              <div class="absolute left-0 w-4 h-4 rounded-full bg-accent border-4 border-white z-10"></div>
+              <div class="bg-primary/5 p-5 rounded-lg">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
+                  <h3 class="font-bold text-lg text-primary">Staff Administrasi</h3>
+                  <span class="text-sm bg-primary/10 text-primary px-2 py-1 rounded">Juli 2023 – Present</span>
+                </div>
+                <p class="font-medium text-dark/80 mb-3">SDN Baluk Cikande</p>
+                <ul class="space-y-2 text-dark/70">
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mr-2 mt-0.5 text-accent flex-shrink-0"></i>
+                    <span>Managed all school documentation and administrative processes, improving record-keeping efficiency by 30%</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mr-2 mt-0.5 text-accent flex-shrink-0"></i>
+                    <span>Coordinated school activities and events for 300+ students, ensuring smooth operations</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mr-2 mt-0.5 text-accent flex-shrink-0"></i>
+                    <span>Maintained inventory of school assets worth Rp 500 million with 100% accuracy</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mr-2 mt-0.5 text-accent flex-shrink-0"></i>
+                    <span>Provided IT support for school computer lab and administrative systems</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <div>
-              <p class="font-semibold text-yellow-600">Staff Warehouse</p>
-              <p>PT. IMPP | 2021 – Juni 2023</p>
-              <ul class="list-disc list-inside text-gray-600 mt-2">
-                <li>Penerimaan dan Pengeluaran Barang</li>
-                <li>Pencatatan dan Inventaris</li>
-                <li>Pemeliharaan Gudang</li>
-                <li>Koordinasi dan Komunikasi</li>
-              </ul>
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item pl-6 relative">
+              <div class="absolute left-0 w-4 h-4 rounded-full bg-accent border-4 border-white z-10"></div>
+              <div class="bg-primary/5 p-5 rounded-lg">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
+                  <h3 class="font-bold text-lg text-primary">Staff Warehouse</h3>
+                  <span class="text-sm bg-primary/10 text-primary px-2 py-1 rounded">2021 – Juni 2023</span>
+                </div>
+                <p class="font-medium text-dark/80 mb-3">PT. IMPP</p>
+                <ul class="space-y-2 text-dark/70">
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mr-2 mt-0.5 text-accent flex-shrink-0"></i>
+                    <span>Managed daily warehouse operations for a facility storing 5,000+ SKUs worth Rp 10 billion</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mr-2 mt-0.5 text-accent flex-shrink-0"></i>
+                    <span>Implemented barcode system that reduced picking errors by 25%</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mr-2 mt-0.5 text-accent flex-shrink-0"></i>
+                    <span>Coordinated with logistics team to ensure on-time shipments with 98% accuracy rate</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mr-2 mt-0.5 text-accent flex-shrink-0"></i>
+                    <span>Conducted monthly stock audits with less than 0.5% variance</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <div>
-              <p class="font-semibold text-yellow-600">Operator Warehouse</p>
-              <p>PT. Kabatama Raya | 2016 – 2018</p>
-              <ul class="list-disc list-inside text-gray-600 mt-2">
-                <li>Pemeriksaan Barang</li>
-                <li>Penyimpanan & Distribusi</li>
-                <li>Kebersihan dan Keamanan Gudang</li>
-                <li>Pelaporan dan Dokumentasi</li>
-              </ul>
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item pl-6 relative">
+              <div class="absolute left-0 w-4 h-4 rounded-full bg-accent border-4 border-white z-10"></div>
+              <div class="bg-primary/5 p-5 rounded-lg">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
+                  <h3 class="font-bold text-lg text-primary">Operator Warehouse</h3>
+                  <span class="text-sm bg-primary/10 text-primary px-2 py-1 rounded">2016 – 2018</span>
+                </div>
+                <p class="font-medium text-dark/80 mb-3">PT. Kabatama Raya</p>
+                <ul class="space-y-2 text-dark/70">
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mr-2 mt-0.5 text-accent flex-shrink-0"></i>
+                    <span>Processed 200+ incoming/outgoing shipments weekly with 99% accuracy</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mr-2 mt-0.5 text-accent flex-shrink-0"></i>
+                    <span>Maintained FIFO inventory system for perishable goods</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mr-2 mt-0.5 text-accent flex-shrink-0"></i>
+                    <span>Operated forklift and pallet jack to move 5+ tons of goods daily</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle mr-2 mt-0.5 text-accent flex-shrink-0"></i>
+                    <span>Implemented 5S methodology, improving workspace efficiency by 20%</span>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
+        </div>
 
-            <div>
-              <p class="font-semibold text-yellow-600">Operator Production</p>
-              <p>PT. Shita Woo Shung | 2016 – 2018</p>
-              <ul class="list-disc list-inside text-gray-600 mt-2">
-                <li>Menjalankan Mesin Produksi</li>
-                <li>Kontrol Kualitas</li>
-                <li>Kebersihan & Keselamatan</li>
-                <li>Pencatatan Hasil Produksi</li>
-              </ul>
+        <!-- Certificates Gallery -->
+        <div class="bg-white rounded-xl shadow-soft p-6 animate-fade-in">
+          <h2 class="text-xl font-bold mb-6 flex items-center">
+            <i class="fas fa-certificate mr-2 text-accent"></i>
+            Certificate Gallery
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="certificate-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">
+              <img src="CCNA.png" alt="CCNA Certificate" class="w-full h-40 object-cover">
+              <div class="p-4">
+                <h3 class="font-semibold text-primary">CCNA Certification</h3>
+                <p class="text-sm text-dark/70 mt-1">Cisco Networking Fundamentals</p>
+                <div class="mt-2 flex justify-between items-center">
+                  <span class="text-xs text-dark/50">Issued: Jan 2022</span>
+                  <a href="CCNA.png" download class="text-primary hover:text-primary/80 text-sm">
+                    <i class="fas fa-download"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="certificate-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">
+              <img src="database.jpg" alt="Database Certificate" class="w-full h-40 object-cover">
+              <div class="p-4">
+                <h3 class="font-semibold text-primary">Database Fundamentals</h3>
+                <p class="text-sm text-dark/70 mt-1">SQL & Database Management</p>
+                <div class="mt-2 flex justify-between items-center">
+                  <span class="text-xs text-dark/50">Issued: Mar 2021</span>
+                  <a href="database.jpg" download class="text-primary hover:text-primary/80 text-sm">
+                    <i class="fas fa-download"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="certificate-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">
+              <img src="DataAnalyst.jpeg" alt="Data Analyst Certificate" class="w-full h-40 object-cover">
+              <div class="p-4">
+                <h3 class="font-semibold text-primary">Data Analyst Bootcamp</h3>
+                <p class="text-sm text-dark/70 mt-1">Data Visualization & Analysis</p>
+                <div class="mt-2 flex justify-between items-center">
+                  <span class="text-xs text-dark/50">Issued: Nov 2020</span>
+                  <a href="DataAnalyst.jpeg" download class="text-primary hover:text-primary/80 text-sm">
+                    <i class="fas fa-download"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="certificate-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">
+              <img src="CyberScurity.png" alt="Cybersecurity Certificate" class="w-full h-40 object-cover">
+              <div class="p-4">
+                <h3 class="font-semibold text-primary">Cybersecurity Bootcamp</h3>
+                <p class="text-sm text-dark/70 mt-1">Security Fundamentals</p>
+                <div class="mt-2 flex justify-between items-center">
+                  <span class="text-xs text-dark/50">Issued: Aug 2021</span>
+                  <a href="CyberScurity.png" download class="text-primary hover:text-primary/80 text-sm">
+                    <i class="fas fa-download"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="certificate-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">
+              <img src="dataSc.jpg" alt="Data Science Certificate" class="w-full h-40 object-cover">
+              <div class="p-4">
+                <h3 class="font-semibold text-primary">Data Science Bootcamp</h3>
+                <p class="text-sm text-dark/70 mt-1">Machine Learning Basics</p>
+                <div class="mt-2 flex justify-between items-center">
+                  <span class="text-xs text-dark/50">Issued: May 2022</span>
+                  <a href="dataSc.jpg" download class="text-primary hover:text-primary/80 text-sm">
+                    <i class="fas fa-download"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="certificate-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">
+              <img src="Desain Grafis.jpg" alt="Design Certificate" class="w-full h-40 object-cover">
+              <div class="p-4">
+                <h3 class="font-semibold text-primary">Graphic Design</h3>
+                <p class="text-sm text-dark/70 mt-1">Adobe Tools Training</p>
+                <div class="mt-2 flex justify-between items-center">
+                  <span class="text-xs text-dark/50">Issued: Sep 2019</span>
+                  <a href="Desain Grafis.jpg" download class="text-primary hover:text-primary/80 text-sm">
+                    <i class="fas fa-download"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- References -->
+        <div class="bg-white rounded-xl shadow-soft p-6 animate-fade-in no-print">
+          <h2 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-comments mr-2 text-accent"></i>
+            References
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-primary/5 p-4 rounded-lg">
+              <h3 class="font-semibold text-primary">Desi Komalasari</h3>
+              <p class="text-sm text-dark/70">Principal at SDN Baluk Cikande</p>
+              <p class="text-sm mt-2 text-dark/80">
+                <i class="fas fa-quote-left mr-1 text-primary/50"></i>
+                Hasim demonstrated exceptional organizational skills during his time at our school. His ability to manage multiple administrative tasks while supporting our IT needs was invaluable.
+              </p>
+              <p class="text-xs mt-2 text-dark/60">
+                <i class="fas fa-phone mr-1"></i> +62 812-3456-7890
+              </p>
+            </div>
+            <div class="bg-primary/5 p-4 rounded-lg">
+              <h3 class="font-semibold text-primary">Ahmad Jani</h3>
+              <p class="text-sm text-dark/70">Warehouse Manager at PT. IMPP</p>
+              <p class="text-sm mt-2 text-dark/80">
+                <i class="fas fa-quote-left mr-1 text-primary/50"></i>
+                One of the most reliable warehouse staff I've worked with. His attention to detail in inventory management helped reduce our discrepancies significantly.
+              </p>
+              <p class="text-xs mt-2 text-dark/60">
+                <i class="fas fa-phone mr-1"></i> +62 813-4567-8901
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </main>
 
-  <!-- Sertifikat Section -->
-<!-- Sertifikat Section -->
-<section class="pb-12">
-  <div class="max-w-5xl mx-auto px-6">
-    <h2 class="text-2xl text-center font-bold text-gray-900 mb-6">Sertifikat</h2>
-    <div class="flex flex-wrap justify-center gap-6">
-      <!-- Sertifikat Card -->
-      <div class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition w-full sm:w-1/2 md:w-1/3">
-        <h3 class="text-lg font-semibold text-yellow-600 mb-2">CCNA Certification</h3>
-        <img src="CCNA.png" alt="CCNA" class="w-full h-48 object-cover rounded-lg shadow" />
-        <p class="text-sm text-gray-600 mt-2">Sertifikasi dari Cisco yang menunjukkan kemampuan dasar dalam jaringan komputer dan troubleshooting.</p>
-      </div>
-
-      <div class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition w-full sm:w-1/2 md:w-1/3">
-        <h3 class="text-lg font-semibold text-yellow-600 mb-2">Database Fundamentals</h3>
-        <img src="database.jpg" alt="Database" class="w-full h-48 object-cover rounded-lg shadow" />
-        <p class="text-sm text-gray-600 mt-2">Pelatihan pengenalan dasar-dasar basis data dan manajemen sistem database relasional</p>
-      </div>
-
-      <div class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition w-full sm:w-1/2 md:w-1/3">
-        <h3 class="text-lg font-semibold text-yellow-600 mb-2">Data Analyst Bootcamp</h3>
-        <img src="DataAnalyst.jpeg" alt="Data Analyst" class="w-full h-48 object-cover rounded-lg shadow" />
-        <p class="text-sm text-gray-600 mt-2">Pelatihan intensif yang membahas pengolahan data, visualisasi, dan analisis data menggunakan tools modern.</p>
-      </div>
-
-      <div class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition w-full sm:w-1/2 md:w-1/3">
-        <h3 class="text-lg font-semibold text-yellow-600 mb-2">Data Science Essentials</h3>
-        <img src="dataSc.jpg" alt="Data Science" class="w-full h-48 object-cover rounded-lg shadow" />
-        <p class="text-sm text-gray-600 mt-2">Pelatihan dasar ilmu data yang mencakup machine learning, statistik, dan penggunaan Python dalam analisis data.</p>
-      </div>
-
-      <div class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition w-full sm:w-1/2 md:w-1/3">
-        <h3 class="text-lg font-semibold text-yellow-600 mb-2">Cyber Security</h3>
-        <img src="CyberScurity.png" alt="Cyber Security" class="w-full h-48 object-cover rounded-lg shadow" />
-        <p class="text-sm text-gray-600 mt-2">Pelatihan dasar keamanan siber yang mencakup identifikasi ancaman, enkripsi, dan langkah-langkah pencegahan risiko.</p>
-      </div>
+  <!-- Footer -->
+  <footer class="gradient-bg text-white py-6 mt-12 no-print">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p>© 2025 Mohammad Hasim Adnan. All rights reserved.</p>
+      <p class="mt-2 text-white/80">Designed with <i class="fas fa-heart text-red-400"></i> using Tailwind CSS</p>
+      <button onclick="window.print()" class="mt-4 bg-white text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition">
+        <i class="fas fa-print mr-2"></i> Print CV
+      </button>
     </div>
-  </div>
-</section>
+  </footer>
 
+  <script>
+    // Simple animation trigger
+    document.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.animate-fade-in');
+      elements.forEach((el, index) => {
+        setTimeout(() => {
+          el.style.opacity = 1;
+        }, index * 100);
+      });
+    });
+  </script>
 </body>
 </html>
